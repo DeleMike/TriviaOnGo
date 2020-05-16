@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mikeinvents.triviaongo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/result_page_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/result_page_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="true">
+        <activity android:name=".ui.SettingsActivity"
+            android:label="@string/action_settings"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.ResultActivity"
+            android:label="@string/result_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.QuizActivity"
+            android:label="@string/quiz_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SelectQuestion"
+            android:label="@string/select_question_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:label="@string/welcome_label"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".receivers.AlertReceiver"/>
+        <receiver android:name=".receivers.NotificationReceiver"/>
+    </application>
+
+</manifest>

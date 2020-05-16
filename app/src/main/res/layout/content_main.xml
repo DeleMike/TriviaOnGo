@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.MainActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/app_bar_main">
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar"/>
+
+    <ImageView
+        android:id="@+id/edit_side_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/ic_edit_side_icon"
+        android:layout_below="@id/main_toolbar"
+        android:contentDescription="@string/edit_icon_desc"/>
+
+    <EditText
+        android:id="@+id/edit_main_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_toEndOf="@id/edit_side_icon"
+        android:layout_margin="16dp"
+        android:inputType="text"
+        android:hint="@string/trivia_username"
+        android:maxLength="15"
+        android:layout_below="@id/main_toolbar"
+        android:background="@drawable/edit_text_background"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/main_button_save"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_below="@id/edit_main_user_name"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/icon_drawable"
+        android:text="@string/save"
+        android:textColor="#FFF"
+        android:onClick="saveUserName"/>
+
+</RelativeLayout>

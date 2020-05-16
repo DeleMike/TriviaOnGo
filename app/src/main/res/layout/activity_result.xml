@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#93d0a3"
+    tools:context=".ui.ResultActivity">
+
+    <include
+        android:id="@+id/result_toolbar"
+        layout="@layout/toolbar" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/result_card"
+        android:layout_width="450dp"
+        android:layout_height="490dp"
+        android:layout_below="@id/result_toolbar"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/quiz_result_top_img"
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/quiz_result_image_top"
+                android:contentDescription="@string/some_design_drawable"
+                android:scaleType="centerCrop"
+                android:src="@drawable/quiz_result_image_top" />
+
+            <ImageView
+                android:id="@+id/quiz_reward_img"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_below="@id/quiz_result_top_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/the_reward_picture"
+                android:src="@drawable/result_page_pic" />
+
+            <TextView
+                android:id="@+id/quiz_result_congrats_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quiz_reward_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="@string/congratulations"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+            <TextView
+                android:id="@+id/quiz_result_course"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quiz_result_congrats_msg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:text="@string/course_taken"
+                android:textAlignment="center"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/quiz_result_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quiz_result_course"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:text="@string/user_score"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/quiz_result_special_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quiz_result_score"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:text="@string/quiz_special_message"
+                android:textColor="#000"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/quiz_result_finish"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:background="#00ffffff"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="@string/finish"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    android:id="@+id/quiz_result_retake"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/save_button_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="@string/take_new_quiz"
+                    android:textColor="#fff" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
